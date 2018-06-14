@@ -1,8 +1,7 @@
-## Welcome to GitHub Pages
+## Welcome to my portfolio!
 
-You can use the [editor on GitHub](https://github.com/chiragtolani/chiragtolani.github.io/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
-
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+Hi, 
+My name is Chirag Tolani and I'm a web developer. If you have entered my site, you must be looking for my projects that I have done.  
 
 ### Markdown
 
