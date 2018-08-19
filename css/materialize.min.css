@@ -4,8 +4,7 @@
  * MIT License (https://raw.githubusercontent.com/Dogfalo/materialize/master/LICENSE)
  */
 .slider .slides li img {
-    background-size:100% auto;
-    background-repeat: no-repeat;
+    height: auto;
 }
 
 .materialize-red {
