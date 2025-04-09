@@ -48,9 +48,15 @@ jobs:
         env:
           NEXT_PUBLIC_BASE_PATH: /chiragtolani.github.io
           
-      - name: List output directory
-        run: ls -la out
-        
+      - name: Debug directory structure
+        run: |
+          echo "Current directory:"
+          pwd
+          echo "Directory contents:"
+          ls -la
+          echo "Out directory contents:"
+          ls -la out || echo "Out directory not found"
+          
       - name: Setup Pages
         uses: actions/configure-pages@v3
         
@@ -58,6 +64,7 @@ jobs:
         uses: actions/upload-pages-artifact@v3
         with:
           path: out
+          retention-days: 1
 
   deploy:
     environment:
