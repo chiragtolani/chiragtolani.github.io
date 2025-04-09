@@ -44,18 +44,15 @@ jobs:
         run: pnpm install
         
       - name: Build
-        run: pnpm run build
+        run: |
+          echo "Starting build process..."
+          pnpm run build
+          echo "Build completed. Checking output directory..."
+          ls -la
+          echo "Checking out directory if it exists..."
+          ls -la out || echo "Out directory not found"
         env:
           NEXT_PUBLIC_BASE_PATH: /chiragtolani.github.io
-          
-      - name: Debug directory structure
-        run: |
-          echo "Current directory:"
-          pwd
-          echo "Directory contents:"
-          ls -la
-          echo "Out directory contents:"
-          ls -la out || echo "Out directory not found"
           
       - name: Setup Pages
         uses: actions/configure-pages@v3
