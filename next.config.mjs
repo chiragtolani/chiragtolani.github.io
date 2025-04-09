@@ -29,6 +29,7 @@ const nextConfig = {
     parallelServerBuildTraces: true,
     parallelServerCompiles: true,
   },
+  trailingSlash: true,
 }
 
 if (userConfig) {

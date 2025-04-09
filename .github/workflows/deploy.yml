@@ -54,6 +54,9 @@ jobs:
         env:
           NEXT_PUBLIC_BASE_PATH: /chiragtolani.github.io
           
+      - name: Create .nojekyll file
+        run: touch out/.nojekyll
+        
       - name: Setup Pages
         uses: actions/configure-pages@v3
         
