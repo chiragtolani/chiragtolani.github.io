@@ -47,6 +47,9 @@ jobs:
         run: pnpm run build
         env:
           NEXT_PUBLIC_BASE_PATH: /chiragtolani.github.io
+          
+      - name: List output directory
+        run: ls -la out
         
       - name: Setup Pages
         uses: actions/configure-pages@v3
@@ -54,7 +57,7 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: ./out
+          path: out
 
   deploy:
     environment:
