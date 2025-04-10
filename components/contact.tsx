@@ -4,7 +4,7 @@ import type React from "react"
 
 import { useState, useRef } from "react"
 import { motion, useInView } from "framer-motion"
-import { Github, Linkedin, Mail, Send, AlertCircle, MessageSquare } from "lucide-react"
+import { Github, Linkedin, Mail, Send, AlertCircle, MessageSquare, Phone } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
@@ -146,6 +146,14 @@ export default function Contact() {
                 </div>
                 <a href="mailto:chirag.tolani54@gmail.com" className="hover:text-primary transition-colors">
                   chirag.tolani54@gmail.com
+                </a>
+              </div>
+              <div className="flex items-center">
+                <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center mr-4">
+                  <Phone className="h-5 w-5 text-primary" />
+                </div>
+                <a href="tel:+447533904189" className="hover:text-primary transition-colors">
+                  +44 7533 904189
                 </a>
               </div>
             </div>

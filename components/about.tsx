@@ -58,7 +58,7 @@ export default function About() {
             animate={isInView ? { opacity: 1, x: 0 } : {}}
             transition={{ duration: 0.6, delay: 0.4 }}
           >
-            <h3 className="text-2xl font-bold mb-4">Turning ideas into real life products is my calling.</h3>
+            <h3 className="text-2xl font-bold mb-4">Designing Scalable AI for a Smarter Future</h3>
 
             <p className="text-muted-foreground mb-6">
               A results-driven consultant with 5+ years of experience in cloud strategy, software development, and
