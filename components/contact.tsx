@@ -10,6 +10,7 @@ import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
 import { cn } from "@/lib/utils"
 import Link from "next/link"
+import emailjs from '@emailjs/browser'
 
 type FormState = {
   name: string
@@ -33,8 +34,10 @@ export default function Contact() {
   const [errors, setErrors] = useState<FormErrors>({})
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [isSubmitted, setIsSubmitted] = useState(false)
+  const [submitError, setSubmitError] = useState<string | null>(null)
 
   const ref = useRef(null)
+  const formRef = useRef<HTMLFormElement>(null)
   const isInView = useInView(ref, { once: true, margin: "-100px" })
 
   const validateForm = (): boolean => {
@@ -68,14 +71,32 @@ export default function Contact() {
     }
   }
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
+    setSubmitError(null)
 
     if (validateForm()) {
       setIsSubmitting(true)
 
-      // Simulate form submission
-      setTimeout(() => {
+      try {
+        const EMAILJS_SERVICE_ID = "service_hlvg25x"
+        const EMAILJS_TEMPLATE_ID = "template_tjjxosc"
+        const EMAILJS_PUBLIC_KEY = "fLZZE77KbDDeuWxdi"
+
+        const templateParams = {
+          to_email: "chirag.tolani54@gmail.com",
+          from_name: formState.name,
+          from_email: formState.email,
+          message: formState.message,
+        }
+
+        await emailjs.send(
+          EMAILJS_SERVICE_ID,
+          EMAILJS_TEMPLATE_ID,
+          templateParams,
+          EMAILJS_PUBLIC_KEY
+        )
+
         setIsSubmitting(false)
         setIsSubmitted(true)
         setFormState({ name: "", email: "", message: "" })
@@ -84,7 +105,11 @@ export default function Contact() {
         setTimeout(() => {
           setIsSubmitted(false)
         }, 5000)
-      }, 1500)
+      } catch (error) {
+        setIsSubmitting(false)
+        setSubmitError("Failed to send message. Please try again later.")
+        console.error("EmailJS Error:", error)
+      }
     }
   }
 
@@ -119,7 +144,7 @@ export default function Contact() {
                 <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center mr-4">
                   <Mail className="h-5 w-5 text-primary" />
                 </div>
-                <a href="mailto:hello@example.com" className="hover:text-primary transition-colors">
+                <a href="mailto:chirag.tolani54@gmail.com" className="hover:text-primary transition-colors">
                   chirag.tolani54@gmail.com
                 </a>
               </div>
@@ -175,7 +200,13 @@ export default function Contact() {
                 </p>
               </motion.div>
             ) : (
-              <form onSubmit={handleSubmit} className="space-y-6">
+              <form ref={formRef} onSubmit={handleSubmit} className="space-y-6">
+                {submitError && (
+                  <div className="flex items-center text-red-500 text-sm p-3 bg-red-50 rounded-md">
+                    <AlertCircle className="h-4 w-4 mr-1" />
+                    <span>{submitError}</span>
+                  </div>
+                )}
                 <div className="space-y-2">
                   <label htmlFor="name" className="text-sm font-medium">
                     Name
