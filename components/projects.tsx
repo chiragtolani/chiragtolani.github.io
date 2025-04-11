@@ -4,7 +4,21 @@ import { useState, useRef } from "react"
 import Image from "next/image"
 import Link from "next/link"
 import { motion, useInView } from "framer-motion"
-import { Github, ExternalLink, FolderKanban } from "lucide-react"
+import { 
+  Github, 
+  ExternalLink, 
+  FolderKanban,
+  Zap, // For ReNewTrade
+  Brain, // For AI Research Assistant
+  CloudCog, // For Cloud Cost Optimizer
+  Server, // For ML Model Deployment
+  ShoppingCart, // For E-Commerce
+  Bot, // For AI Content Generator
+  LayoutDashboard, // For Task Management
+  Activity, // For Fitness Tracking
+  Home, // For Real Estate
+  BarChart // For Analytics
+} from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { cn } from "@/lib/utils"
 
@@ -16,6 +30,7 @@ const projectsData = [
     tags: ["Next.js", "React", "Three.js", "TypeScript", "Tailwind"],
     github: "https://github.com/chiragtolani/ReNewTrade",
     demo: "https://v0-p2-p-renewable-energy-project-25.vercel.app",
+    icon: Zap
   },
   {
     title: "AI Research Assistant",
@@ -23,6 +38,7 @@ const projectsData = [
     tags: ["Python", "PyTorch", "FastAPI", "React"],
     github: "https://github.com",
     demo: "https://demo.com",
+    icon: Brain
   },
   {
     title: "Cloud Cost Optimizer",
@@ -30,6 +46,7 @@ const projectsData = [
     tags: ["Python", "AWS", "Terraform", "React"],
     github: "https://github.com",
     demo: "https://demo.com",
+    icon: CloudCog
   },
   {
     title: "ML Model Deployment Platform",
@@ -37,6 +54,7 @@ const projectsData = [
     tags: ["Python", "Kubernetes", "MLflow", "FastAPI"],
     github: "https://github.com",
     demo: "https://demo.com",
+    icon: Server
   },
   {
     title: "E-Commerce Platform",
@@ -138,8 +156,8 @@ export default function Projects() {
             >
               <div className="bg-background rounded-lg overflow-hidden border shadow-sm h-full flex flex-col">
                 <div className="relative h-48 bg-muted flex items-center justify-center group-hover:bg-black/60 transition-colors duration-300">
-                  <div className="text-4xl font-bold text-muted-foreground/20 group-hover:opacity-0 transition-opacity duration-300">
-                    {project.title.charAt(0)}
+                  <div className="text-6xl text-primary/40 group-hover:opacity-0 transition-opacity duration-300">
+                    {project.icon && <project.icon size={64} />}
                   </div>
                   <div className="absolute inset-0 flex items-center justify-center gap-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                     <motion.div whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.95 }}>
