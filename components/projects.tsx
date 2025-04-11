@@ -10,6 +10,35 @@ import { cn } from "@/lib/utils"
 
 const projectsData = [
   {
+    title: "ReNewTrade",
+    description:
+      "A modern peer-to-peer renewable energy trading platform with interactive 3D visualizations. Features include real-time data visualization, dark/light mode, and responsive design.",
+    tags: ["Next.js", "React", "Three.js", "TypeScript", "Tailwind"],
+    github: "https://github.com/chiragtolani/ReNewTrade",
+    demo: "https://v0-p2-p-renewable-energy-project-25.vercel.app",
+  },
+  {
+    title: "AI Research Assistant",
+    description: "An intelligent research assistant powered by large language models to help researchers analyze papers and generate insights.",
+    tags: ["Python", "PyTorch", "FastAPI", "React"],
+    github: "https://github.com",
+    demo: "https://demo.com",
+  },
+  {
+    title: "Cloud Cost Optimizer",
+    description: "A cloud cost optimization tool that analyzes infrastructure usage and provides recommendations for cost savings.",
+    tags: ["Python", "AWS", "Terraform", "React"],
+    github: "https://github.com",
+    demo: "https://demo.com",
+  },
+  {
+    title: "ML Model Deployment Platform",
+    description: "A platform for deploying and monitoring machine learning models in production with automated scaling.",
+    tags: ["Python", "Kubernetes", "MLflow", "FastAPI"],
+    github: "https://github.com",
+    demo: "https://demo.com",
+  },
+  {
     title: "E-Commerce Platform",
     description:
       "A full-featured e-commerce platform with product management, cart functionality, and payment processing.",
@@ -54,7 +83,7 @@ const projectsData = [
   },
 ]
 
-const filterCategories = ["All", "React", "Next.js", "Node.js", "MongoDB", "Firebase", "Python"]
+const filterCategories = ["All", "Next.js", "React", "Three.js", "Python", "TypeScript", "AWS"]
 
 export default function Projects() {
   const [activeFilter, setActiveFilter] = useState("All")
