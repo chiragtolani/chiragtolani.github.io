@@ -137,9 +137,35 @@ export default function Projects() {
               className="group"
             >
               <div className="bg-background rounded-lg overflow-hidden border shadow-sm h-full flex flex-col">
-                <div className="relative h-48 bg-muted flex items-center justify-center">
-                  <div className="text-4xl font-bold text-muted-foreground/20">
+                <div className="relative h-48 bg-muted flex items-center justify-center group-hover:bg-black/60 transition-colors duration-300">
+                  <div className="text-4xl font-bold text-muted-foreground/20 group-hover:opacity-0 transition-opacity duration-300">
                     {project.title.charAt(0)}
+                  </div>
+                  <div className="absolute inset-0 flex items-center justify-center gap-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    <motion.div whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.95 }}>
+                      <Link href={project.github} target="_blank" rel="noopener noreferrer">
+                        <Button
+                          size="icon"
+                          variant="outline"
+                          className="rounded-full bg-background/20 backdrop-blur-sm border-white/20 hover:bg-background/30"
+                        >
+                          <Github className="h-5 w-5" />
+                          <span className="sr-only">GitHub</span>
+                        </Button>
+                      </Link>
+                    </motion.div>
+                    <motion.div whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.95 }}>
+                      <Link href={project.demo} target="_blank" rel="noopener noreferrer">
+                        <Button
+                          size="icon"
+                          variant="outline"
+                          className="rounded-full bg-background/20 backdrop-blur-sm border-white/20 hover:bg-background/30"
+                        >
+                          <ExternalLink className="h-5 w-5" />
+                          <span className="sr-only">Live Demo</span>
+                        </Button>
+                      </Link>
+                    </motion.div>
                   </div>
                 </div>
 
