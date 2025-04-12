@@ -55,50 +55,7 @@ const projectsData = [
     github: "https://github.com",
     demo: "https://demo.com",
     icon: Server
-  },
-  {
-    title: "E-Commerce Platform",
-    description:
-      "A full-featured e-commerce platform with product management, cart functionality, and payment processing.",
-    tags: ["React", "Node.js", "MongoDB", "Stripe"],
-    github: "https://github.com",
-    demo: "https://demo.com",
-  },
-  {
-    title: "AI Content Generator",
-    description: "An AI-powered application that generates blog posts, social media content, and marketing copy.",
-    tags: ["Next.js", "OpenAI API", "TailwindCSS", "Vercel"],
-    github: "https://github.com",
-    demo: "https://demo.com",
-  },
-  {
-    title: "Task Management Dashboard",
-    description: "A collaborative task management tool with real-time updates, file sharing, and progress tracking.",
-    tags: ["React", "Firebase", "Redux", "Material UI"],
-    github: "https://github.com",
-    demo: "https://demo.com",
-  },
-  {
-    title: "Fitness Tracking App",
-    description: "A mobile-responsive application for tracking workouts, nutrition, and fitness goals.",
-    tags: ["React Native", "Express", "PostgreSQL", "Chart.js"],
-    github: "https://github.com",
-    demo: "https://demo.com",
-  },
-  {
-    title: "Real Estate Listing Platform",
-    description: "A platform for property listings with search, filtering, and virtual tour capabilities.",
-    tags: ["Vue.js", "Django", "PostgreSQL", "Google Maps API"],
-    github: "https://github.com",
-    demo: "https://demo.com",
-  },
-  {
-    title: "Social Media Analytics Tool",
-    description: "A dashboard for tracking and analyzing social media performance across multiple platforms.",
-    tags: ["React", "Python", "FastAPI", "D3.js"],
-    github: "https://github.com",
-    demo: "https://demo.com",
-  },
+  }
 ]
 
 const filterCategories = ["All", "Next.js", "React", "Three.js", "Python", "TypeScript", "AWS"]
