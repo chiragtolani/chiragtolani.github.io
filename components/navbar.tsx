@@ -62,16 +62,8 @@ export default function Navbar() {
       )}
     >
       <div className="container mx-auto px-4 py-3 flex items-center justify-between">
-        <Link href="/#home" className="font-bold text-lg flex items-center">
-          <Image
-            src="/images/ct-logo.png"
-            alt="CT Logo"
-            width={40}
-            height={40}
-            className="w-auto h-8 object-contain"
-            style={{ backgroundColor: 'transparent' }}
-            priority
-          />
+        <Link href="#home" className="text-xl font-bold tracking-tighter">
+          CT
         </Link>
 
         {/* Desktop Navigation */}
