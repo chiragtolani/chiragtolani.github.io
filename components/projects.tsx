@@ -21,7 +21,10 @@ import {
   Sparkles, // For Zora API
   Leaf, // For ReNewTrade
   Network, // For AI Content Creator
-  BrainCircuit // For Multi-Model Approach
+  BrainCircuit, // For Multi-Model Approach
+  ChevronDown,
+  Download,
+  Globe
 } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { cn } from "@/lib/utils"
@@ -54,10 +57,11 @@ const projectsData = [
   }
 ]
 
-const filterCategories = ["All", "Next.js", "React", "Three.js", "Python", "TypeScript", "AWS"]
+const filterCategories = ["All", "Next.js", "React", "Python", "Blockchain", "PyTorch", "Jupyter Notebook", "BERT", "ZoraCoin", "Gemini", "Reinforcement Learning", "Prompt Engineering"]
 
 export default function Projects() {
   const [activeFilter, setActiveFilter] = useState("All")
+  const [showResumeDropdown, setShowResumeDropdown] = useState(false)
   const ref = useRef(null)
   const isInView = useInView(ref, { once: true, margin: "-100px" })
 
@@ -78,24 +82,77 @@ export default function Projects() {
           <h2 className="text-3xl md:text-4xl font-bold text-center">Projects</h2>
         </motion.div>
 
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={isInView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.6, delay: 0.2 }}
-          className="flex flex-wrap justify-center gap-2 mb-12"
-        >
-          {filterCategories.map((category) => (
+        <div className="flex flex-col items-center gap-4 mb-12">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={isInView ? { opacity: 1, y: 0 } : {}}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            className="flex flex-wrap justify-center gap-2"
+          >
+            {filterCategories.map((category) => (
+              <Button
+                key={category}
+                variant={activeFilter === category ? "default" : "outline"}
+                size="sm"
+                onClick={() => setActiveFilter(category)}
+                className="rounded-full"
+              >
+                {category}
+              </Button>
+            ))}
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={isInView ? { opacity: 1, y: 0 } : {}}
+            transition={{ duration: 0.6, delay: 0.4 }}
+            className="relative"
+          >
             <Button
-              key={category}
-              variant={activeFilter === category ? "default" : "outline"}
-              size="sm"
-              onClick={() => setActiveFilter(category)}
-              className="rounded-full"
+              variant="outline"
+              size="lg"
+              onClick={() => setShowResumeDropdown(!showResumeDropdown)}
+              className="group"
             >
-              {category}
+              View Resume
+              <ChevronDown className="ml-2 h-4 w-4 group-hover:translate-y-1 transition-transform" />
             </Button>
-          ))}
-        </motion.div>
+            
+            {showResumeDropdown && (
+              <motion.div
+                initial={{ opacity: 0, y: -10 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: -10 }}
+                className="absolute top-full left-0 mt-2 w-48 bg-background border rounded-lg shadow-lg z-10"
+              >
+                <div className="p-2">
+                  <Button
+                    variant="ghost"
+                    className="w-full justify-start"
+                    onClick={() => {
+                      // Placeholder for download resume
+                      window.open('/resume.pdf', '_blank')
+                    }}
+                  >
+                    <Download className="mr-2 h-4 w-4" />
+                    Download PDF
+                  </Button>
+                  <Button
+                    variant="ghost"
+                    className="w-full justify-start"
+                    onClick={() => {
+                      // Placeholder for web CV
+                      window.open('/cv', '_blank')
+                    }}
+                  >
+                    <Globe className="mr-2 h-4 w-4" />
+                    View Web CV
+                  </Button>
+                </div>
+              </motion.div>
+            )}
+          </motion.div>
+        </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {filteredProjects.map((project, index) => (
