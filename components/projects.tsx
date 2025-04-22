@@ -17,7 +17,11 @@ import {
   LayoutDashboard, // For Task Management
   Activity, // For Fitness Tracking
   Home, // For Real Estate
-  BarChart // For Analytics
+  BarChart, // For Analytics
+  Sparkles, // For Zora API
+  Leaf, // For ReNewTrade
+  Network, // For AI Content Creator
+  BrainCircuit // For Multi-Model Approach
 } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { cn } from "@/lib/utils"
@@ -26,19 +30,19 @@ const projectsData = [
   {
     title: "ReNewTrade",
     description:
-      "an innovative decentralized platform that enables individuals generating surplus solar energy at home to trade their excess energy with factories and companies, while also earning carbon credits and monetary rewards.",
+      "An innovative decentralized platform that enables individuals generating surplus solar energy at home to trade their excess energy with factories and companies, while also earning carbon credits and monetary rewards.",
     tags: ["Next.js", "React", "Blockchain", "Gemini", "Reinforcement Learning", "Python", "Prompt Engineering"],
     github: "https://github.com/chiragtolani/ReNewTrade",
     demo: "https://v0-p2-p-renewable-energy-project-25.vercel.app",
-    icon: Zap
+    icon: Leaf
   },
   {
     title: "Multi-Model Approach to Relation Extraction",
-    description: "This project focuses on Relation Extraction, comparing two major approaches: a traditional machine learning model and a graph-based neural network. We implement XGBoost as our traditional model and Graph Convolutional Networks (GCN) as our graph-based approach, utilizing the re-DOCRED dataset. For both models, the input data is pre-processed and converted into BERT embeddings to capture rich contextual features. The goal is to evaluate and compare the performance of these distinct methodologies in extracting relationships from text data.",
+    description: "This project focuses on Relation Extraction, comparing two major approaches: a traditional machine learning model and a graph-based neural network. We implement XGBoost as our traditional model and Graph Convolutional Networks (GCN) as our graph-based approach, utilizing the re-DOCRED dataset. For both models, the input data is pre-processed and converted into BERT embeddings to capture rich contextual features.",
     tags: ["Python", "PyTorch", "Jupyter Notebook", "BERT"],
     github: "https://github.com/chiragtolani/DocRed-RE",
     demo: "https://github.com/chiragtolani/DocRed-RE",
-    icon: Brain
+    icon: BrainCircuit
   },
   {
     title: "AI Content Creator using Zora API",
@@ -46,7 +50,7 @@ const projectsData = [
     tags: ["Python", "ZoraCoin", "Blockchain", "React"],
     github: "https://github.com",
     demo: "https://demo.com",
-    icon: CloudCog
+    icon: Sparkles
   }
 ]
 

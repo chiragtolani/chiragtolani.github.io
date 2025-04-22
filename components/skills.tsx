@@ -60,7 +60,7 @@ export default function Skills() {
             >
               <div className="flex items-center gap-3 mb-4">
                 <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center">{icon}</div>
-                <h3 className="text-xl font-bold">{category}</h3>
+                <h3 className="text-xl font-bold text-primary">{category}</h3>
               </div>
 
               <div className="flex flex-wrap gap-2">

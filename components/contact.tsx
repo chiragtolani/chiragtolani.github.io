@@ -4,7 +4,7 @@ import type React from "react"
 
 import { useState, useRef } from "react"
 import { motion, useInView } from "framer-motion"
-import { Github, Linkedin, Mail, Send, AlertCircle, MessageSquare, Phone } from "lucide-react"
+import { Github, Linkedin, Mail, Send, AlertCircle, MessageSquare, Phone, Award } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
@@ -177,10 +177,10 @@ export default function Contact() {
                 </Link>
               </motion.div>
               <motion.div whileHover={{ y: -5 }} whileTap={{ scale: 0.95 }}>
-                <Link href="/Chirag-Tolani-Resume-2025.pdf" target="_blank">
+                <Link href="https://www.credly.com/users/chirag-tolani" target="_blank" rel="noopener noreferrer">
                   <Button size="icon" variant="outline" className="rounded-full">
-                    <Mail className="h-5 w-5" />
-                    <span className="sr-only">Resume</span>
+                    <Award className="h-5 w-5" />
+                    <span className="sr-only">Credly</span>
                   </Button>
                 </Link>
               </motion.div>
