@@ -4,11 +4,12 @@ import { useState, useEffect } from "react"
 import { motion } from "framer-motion"
 import { Button } from "@/components/ui/button"
 import Link from "next/link"
-import { ArrowDown, Download } from "lucide-react"
+import { ArrowDown, Download, ChevronDown, Globe } from "lucide-react"
 
 export default function Hero() {
   const [text, setText] = useState("")
   const [isTyping, setIsTyping] = useState(true)
+  const [showResumeDropdown, setShowResumeDropdown] = useState(false)
   const fullText = "Hi, I'm Chirag Tolani, an AI/ML Engineer"
 
   useEffect(() => {
@@ -93,12 +94,51 @@ export default function Hero() {
                 <ArrowDown className="ml-2 h-4 w-4 group-hover:translate-y-1 transition-transform" />
               </Link>
             </Button>
-            <Button asChild variant="outline" size="lg" className="group">
-              <Link href="/resume.pdf" target="_blank">
+            <div className="relative">
+              <Button
+                variant="outline"
+                size="lg"
+                className="group"
+                onClick={() => setShowResumeDropdown(!showResumeDropdown)}
+              >
                 Get My Resume
-                <Download className="ml-2 h-4 w-4 group-hover:translate-y-1 transition-transform" />
-              </Link>
-            </Button>
+                <ChevronDown className="ml-2 h-4 w-4 group-hover:translate-y-1 transition-transform" />
+              </Button>
+              
+              {showResumeDropdown && (
+                <motion.div
+                  initial={{ opacity: 0, y: -10 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  exit={{ opacity: 0, y: -10 }}
+                  className="absolute top-full left-0 mt-2 w-48 bg-background border rounded-lg shadow-lg z-10"
+                >
+                  <div className="p-2">
+                    <Button
+                      variant="ghost"
+                      className="w-full justify-start"
+                      onClick={() => {
+                        // Placeholder for download resume
+                        window.open('/resume.pdf', '_blank')
+                      }}
+                    >
+                      <Download className="mr-2 h-4 w-4" />
+                      Download PDF
+                    </Button>
+                    <Button
+                      variant="ghost"
+                      className="w-full justify-start"
+                      onClick={() => {
+                        // Placeholder for web CV
+                        window.open('/cv', '_blank')
+                      }}
+                    >
+                      <Globe className="mr-2 h-4 w-4" />
+                      View Web CV
+                    </Button>
+                  </div>
+                </motion.div>
+              )}
+            </div>
           </motion.div>
         </motion.div>
       </div>
