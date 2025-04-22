@@ -11,7 +11,7 @@ const skillsData = {
   },
   "Programming Languages": {
     icon: <Code className="h-5 w-5" />,
-    skills: ["Python", "C++", "JavaScript", "HTML/CSS", "SQL"],
+    skills: ["Python", "C++", "JavaScript", "SQL"],
   },
   "Data Science": {
     icon: <BarChart className="h-5 w-5" />,
@@ -19,15 +19,15 @@ const skillsData = {
   },
   "Databases & Tools": {
     icon: <Database className="h-5 w-5" />,
-    skills: ["PostgreSQL", "MongoDB", "Git", "Docker", "Jupyter"],
+    skills: ["MySQL", "Git", "Docker", "Jupyter"],
   },
   Frameworks: {
     icon: <Layers className="h-5 w-5" />,
     skills: ["Flask", "Django", "React", "Next.js", "FastAPI"],
   },
-  "DevOps & Cloud": {
+  "Cloud": {
     icon: <Cloud className="h-5 w-5" />,
-    skills: ["AWS", "Google Cloud", "CI/CD", "Linux", "Kubernetes"],
+    skills: ["AWS", "Google Cloud", "OCI", "Azure"],
   },
 }
 
@@ -72,7 +72,9 @@ export default function Skills() {
                     transition={{ duration: 0.3, delay: categoryIndex * 0.1 + skillIndex * 0.05 }}
                     className="group"
                   >
-                    <span className="text-sm font-medium group-hover:text-primary transition-colors">{skill}</span>
+                    <span className="text-xs px-2 py-1 rounded-full bg-muted text-muted-foreground group-hover:bg-primary/20 group-hover:text-primary transition-colors">
+                      {skill}
+                    </span>
                   </motion.div>
                 ))}
               </div>
