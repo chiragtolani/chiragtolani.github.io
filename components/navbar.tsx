@@ -68,7 +68,8 @@ export default function Navbar() {
             alt="CT Logo"
             width={40}
             height={40}
-            className="w-auto h-8"
+            className="w-auto h-8 object-contain"
+            style={{ backgroundColor: 'transparent' }}
             priority
           />
         </Link>
