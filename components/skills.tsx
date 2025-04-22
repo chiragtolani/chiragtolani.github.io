@@ -72,17 +72,7 @@ export default function Skills() {
                     transition={{ duration: 0.3, delay: categoryIndex * 0.1 + skillIndex * 0.05 }}
                     className="group"
                   >
-                    <div className="flex justify-between items-center mb-1">
-                      <span className="text-sm font-medium group-hover:text-primary transition-colors">{skill}</span>
-                    </div>
-                    <div className="w-full bg-muted rounded-full h-2 overflow-hidden">
-                      <motion.div
-                        className="bg-primary h-full rounded-full"
-                        initial={{ width: 0 }}
-                        animate={isInView ? { width: "100%" } : {}}
-                        transition={{ duration: 1, delay: categoryIndex * 0.1 + skillIndex * 0.1 }}
-                      />
-                    </div>
+                    <span className="text-sm font-medium group-hover:text-primary transition-colors">{skill}</span>
                   </motion.div>
                 ))}
               </div>

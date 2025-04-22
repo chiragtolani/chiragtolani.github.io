@@ -10,8 +10,7 @@ const experienceData = [
     title: "Senior Consultant - Cloud & Engineering",
     company: "Deloitte & Touche (M.E.)",
     period: "Jun 2023 - Sept 2024",
-    description: "To be updated",
-    achievements: [
+    description: [
       "Advised 15+ financial and public sector clients on cloud strategy & architecture, service operations, and target operating models to accelerate and optimize cloud transformation",
       "Projected pricing estimates and conducted TCO analysis for a major KSA government entity, identifying over 5 billion SAR in potential cost savings on cloud offerings",
       "Developed proposals, eminence and thought leadership for 50+ clients and delivered trainings to the internal team on latest cloud trends",
@@ -21,8 +20,7 @@ const experienceData = [
     title: "Consultant - Cloud & Engineering",
     company: "Deloitte & Touche (M.E.)",
     period: "Aug 2021 - Jun 2023",
-    description: "XX",
-    achievements: [
+    description: [
       "Prepared a cloud market analysis report for a leading KSA bank, covering trends, regulations, and insights from 200+ banks to guide the bank's cloud strategy and decision-making",
       "Designed infrastructure architectures following best practices for banks and government organizations in the region, enhancing scalability, security, and compliance",
       "Supporting in the quality assurance of the deliverables as well as managing and coordinating the project management activities involved in cloud projects",
@@ -32,8 +30,7 @@ const experienceData = [
     title: "Business Analyst - Cloud & Engineering",
     company: "Deloitte & Touche (M.E.)",
     period: "Aug 2019 - July 2021",
-    description: "XX",
-    achievements: [
+    description: [
       "Prepared detailed infrastructure design documents and architectures for various banks and government entities in order to help them in the decision making of moving on-premises or cloud",
       "Developed analysis reports for organizations to understand the current cloud landscape as well as providers available in the market",
       "Developed strategy documents for cloud and data centers detailing the vision, objectives as well as analysis of their current landscape and their operating model in order to enable them to cloud",
@@ -112,13 +109,11 @@ export default function Experience() {
                       className="overflow-hidden"
                     >
                       <div className="px-6 pb-6 pt-2 border-t">
-                        <p className="text-muted-foreground mb-4">{item.description}</p>
-                        <h5 className="font-semibold mb-2">Key Achievements:</h5>
                         <ul className="space-y-2">
-                          {item.achievements.map((achievement, i) => (
+                          {item.description.map((point, i) => (
                             <li key={i} className="flex items-start">
                               <span className="w-1.5 h-1.5 rounded-full bg-primary mt-2 mr-2"></span>
-                              <span className="text-muted-foreground">{achievement}</span>
+                              <span className="text-muted-foreground">{point}</span>
                             </li>
                           ))}
                         </ul>

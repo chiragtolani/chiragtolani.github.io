@@ -41,9 +41,9 @@ const projectsData = [
     icon: Brain
   },
   {
-    title: "Cloud Cost Optimizer",
+    title: "AI Content Creator using Zora API",
     description: "A cloud cost optimization tool that analyzes infrastructure usage and provides recommendations for cost savings.",
-    tags: ["Python", "AWS", "Terraform", "React"],
+    tags: ["Python", "ZoraCoin", "Blockchain", "React"],
     github: "https://github.com",
     demo: "https://demo.com",
     icon: CloudCog
