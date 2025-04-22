@@ -63,7 +63,7 @@ export default function Skills() {
                 <h3 className="text-xl font-bold">{category}</h3>
               </div>
 
-              <div className="flex flex-col space-y-3">
+              <div className="flex flex-wrap gap-2">
                 {skills.map((skill, skillIndex) => (
                   <motion.div
                     key={skill}

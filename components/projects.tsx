@@ -34,7 +34,7 @@ const projectsData = [
   },
   {
     title: "Multi-Model Approach to Relation Extraction",
-    description: "An intelligent research assistant powered by large language models to help researchers analyze papers and generate insights.",
+    description: "This project focuses on Relation Extraction, comparing two major approaches: a traditional machine learning model and a graph-based neural network. We implement XGBoost as our traditional model and Graph Convolutional Networks (GCN) as our graph-based approach, utilizing the re-DOCRED dataset. For both models, the input data is pre-processed and converted into BERT embeddings to capture rich contextual features. The goal is to evaluate and compare the performance of these distinct methodologies in extracting relationships from text data.",
     tags: ["Python", "PyTorch", "Jupyter Notebook", "BERT"],
     github: "https://github.com/chiragtolani/DocRed-RE",
     demo: "https://github.com/chiragtolani/DocRed-RE",
@@ -42,7 +42,7 @@ const projectsData = [
   },
   {
     title: "AI Content Creator using Zora API",
-    description: "A cloud cost optimization tool that analyzes infrastructure usage and provides recommendations for cost savings.",
+    description: "A content creator platform that allows users to generate AI based images based on user defined prompts and the agent recommends potential changes as per latest trends. The AI agent then creates a NFT on ZoraCoin and the user can mint it on Zora Marketplace.",
     tags: ["Python", "ZoraCoin", "Blockchain", "React"],
     github: "https://github.com",
     demo: "https://demo.com",
