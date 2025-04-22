@@ -26,18 +26,18 @@ const projectsData = [
   {
     title: "ReNewTrade",
     description:
-      "A modern peer-to-peer renewable energy trading platform with interactive 3D visualizations. Features include real-time data visualization, dark/light mode, and responsive design.",
-    tags: ["Next.js", "React", "Three.js", "TypeScript", "Tailwind"],
+      "an innovative decentralized platform that enables individuals generating surplus solar energy at home to trade their excess energy with factories and companies, while also earning carbon credits and monetary rewards.",
+    tags: ["Next.js", "React", "Blockchain", "Gemini", "Reinforcement Learning", "Python", "Prompt Engineering"],
     github: "https://github.com/chiragtolani/ReNewTrade",
     demo: "https://v0-p2-p-renewable-energy-project-25.vercel.app",
     icon: Zap
   },
   {
-    title: "AI Research Assistant",
+    title: "Multi-Model Approach to Relation Extraction",
     description: "An intelligent research assistant powered by large language models to help researchers analyze papers and generate insights.",
-    tags: ["Python", "PyTorch", "FastAPI", "React"],
-    github: "https://github.com",
-    demo: "https://demo.com",
+    tags: ["Python", "PyTorch", "Jupyter Notebook", "BERT"],
+    github: "https://github.com/chiragtolani/DocRed-RE",
+    demo: "https://github.com/chiragtolani/DocRed-RE",
     icon: Brain
   },
   {
@@ -47,14 +47,6 @@ const projectsData = [
     github: "https://github.com",
     demo: "https://demo.com",
     icon: CloudCog
-  },
-  {
-    title: "ML Model Deployment Platform",
-    description: "A platform for deploying and monitoring machine learning models in production with automated scaling.",
-    tags: ["Python", "Kubernetes", "MLflow", "FastAPI"],
-    github: "https://github.com",
-    demo: "https://demo.com",
-    icon: Server
   }
 ]
 

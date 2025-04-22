@@ -13,6 +13,12 @@ const certificationsData = [
     credentialLink: "https://learn.nvidia.com/certificates?id",
   },
   {
+    title: "Building LLM Applications with Prompt Engineering",
+    issuer: "NVIDIA",
+    date: "Apr 2025",
+    credentialLink: "https://learn.nvidia.com/certificates?id",
+  },
+  {
     title: "AWS Partner: Generative AI Essentials (Business)",
     issuer: "Amazon Web Services (AWS)",
     date: "Oct 2023",
