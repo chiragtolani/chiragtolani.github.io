@@ -118,7 +118,7 @@ export default function Hero() {
                       className="w-full justify-start"
                       onClick={() => {
                         // Placeholder for download resume
-                        window.open('/resume.pdf', '_blank')
+                        window.open('/Chirag-Tolani-Resume-2025.pdf', '_blank')
                       }}
                     >
                       <Download className="mr-2 h-4 w-4" />
