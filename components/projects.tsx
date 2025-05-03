@@ -61,7 +61,6 @@ const filterCategories = ["All", "Next.js", "React", "Python", "Blockchain", "Py
 
 export default function Projects() {
   const [activeFilter, setActiveFilter] = useState("All")
-  const [showResumeDropdown, setShowResumeDropdown] = useState(false)
   const ref = useRef(null)
   const isInView = useInView(ref, { once: true, margin: "-100px" })
 
@@ -100,57 +99,6 @@ export default function Projects() {
                 {category}
               </Button>
             ))}
-          </motion.div>
-
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={isInView ? { opacity: 1, y: 0 } : {}}
-            transition={{ duration: 0.6, delay: 0.4 }}
-            className="relative"
-          >
-            <Button
-              variant="outline"
-              size="lg"
-              onClick={() => setShowResumeDropdown(!showResumeDropdown)}
-              className="group"
-            >
-              View Resume
-              <ChevronDown className="ml-2 h-4 w-4 group-hover:translate-y-1 transition-transform" />
-            </Button>
-            
-            {showResumeDropdown && (
-              <motion.div
-                initial={{ opacity: 0, y: -10 }}
-                animate={{ opacity: 1, y: 0 }}
-                exit={{ opacity: 0, y: -10 }}
-                className="absolute top-full left-0 mt-2 w-48 bg-background border rounded-lg shadow-lg z-10"
-              >
-                <div className="p-2">
-                  <Button
-                    variant="ghost"
-                    className="w-full justify-start"
-                    onClick={() => {
-                      // Placeholder for download resume
-                      window.open('/resume.pdf', '_blank')
-                    }}
-                  >
-                    <Download className="mr-2 h-4 w-4" />
-                    Download PDF
-                  </Button>
-                  <Button
-                    variant="ghost"
-                    className="w-full justify-start"
-                    onClick={() => {
-                      // Placeholder for web CV
-                      window.open('/cv', '_blank')
-                    }}
-                  >
-                    <Globe className="mr-2 h-4 w-4" />
-                    View Web CV
-                  </Button>
-                </div>
-              </motion.div>
-            )}
           </motion.div>
         </div>
 
