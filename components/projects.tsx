@@ -51,7 +51,7 @@ const projectsData = [
     title: "Industry Project - AI Strategy",
     description: "Windō, a platform connecting Gen Z talent with purpose-driven employers, tasked us with addressing their manual data scraping challenges and scaling needs to support employers globally. Their mission is to empower young professionals with transparent CSR, sustainability, and DEI data, and our team developed an AI strategy report detailing their pain points, key AI trends and use cases within the sector, what tools could be utilized to extract them, several AI opportunities that can be leveraged and finally an implementation roadmap.",
     tags: ["AI Strategy", "Project Management"],
-    demo: "/manchester-microinternship-badge.png",
+    demo: "../manchester-microinternship-badge.png",
     icon: Globe
   }
 ]
@@ -79,27 +79,6 @@ export default function Projects() {
           <FolderKanban className="h-8 w-8 text-primary" />
           <h2 className="text-3xl md:text-4xl font-bold text-center">Projects</h2>
         </motion.div>
-
-        <div className="flex flex-col items-center gap-4 mb-12">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={isInView ? { opacity: 1, y: 0 } : {}}
-            transition={{ duration: 0.6, delay: 0.2 }}
-            className="flex flex-wrap justify-center gap-2"
-          >
-            {filterCategories.map((category) => (
-              <Button
-                key={category}
-                variant={activeFilter === category ? "default" : "outline"}
-                size="sm"
-                onClick={() => setActiveFilter(category)}
-                className="rounded-full"
-              >
-                {category}
-              </Button>
-            ))}
-          </motion.div>
-        </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {filteredProjects.map((project, index) => (

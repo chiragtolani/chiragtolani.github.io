@@ -159,29 +159,29 @@ export default function Contact() {
             </div>
 
             <h4 className="text-lg font-semibold mb-4">Connect With Me</h4>
-            <div className="flex space-x-4">
+            <div className="flex flex-col space-y-3">
               <motion.div whileHover={{ y: -5 }} whileTap={{ scale: 0.95 }}>
-                <Link href="https://github.com/chiragtolani" target="_blank" rel="noopener noreferrer">
+                <Link href="https://github.com/chiragtolani" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3">
                   <Button size="icon" variant="outline" className="rounded-full">
                     <Github className="h-5 w-5" />
-                    <span className="sr-only">GitHub</span>
                   </Button>
+                  <span className="text-base font-medium">GitHub</span>
                 </Link>
               </motion.div>
               <motion.div whileHover={{ y: -5 }} whileTap={{ scale: 0.95 }}>
-                <Link href="https://linkedin.com/in/chiragtolani97" target="_blank" rel="noopener noreferrer">
+                <Link href="https://linkedin.com/in/chiragtolani97" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3">
                   <Button size="icon" variant="outline" className="rounded-full">
                     <Linkedin className="h-5 w-5" />
-                    <span className="sr-only">LinkedIn</span>
                   </Button>
+                  <span className="text-base font-medium">LinkedIn</span>
                 </Link>
               </motion.div>
               <motion.div whileHover={{ y: -5 }} whileTap={{ scale: 0.95 }}>
-                <Link href="https://www.credly.com/users/chirag-tolani" target="_blank" rel="noopener noreferrer">
+                <Link href="https://www.credly.com/users/chirag-tolani" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3">
                   <Button size="icon" variant="outline" className="rounded-full">
                     <Award className="h-5 w-5" />
-                    <span className="sr-only">Credly</span>
                   </Button>
+                  <span className="text-base font-medium">Credly</span>
                 </Link>
               </motion.div>
             </div>
