@@ -51,7 +51,7 @@ const projectsData = [
     title: "Industry Project - AI Strategy",
     description: "Windō, a platform connecting Gen Z talent with purpose-driven employers, tasked us with addressing their manual data scraping challenges and scaling needs to support employers globally. Their mission is to empower young professionals with transparent CSR, sustainability, and DEI data, and our team developed an AI strategy report detailing their pain points, key AI trends and use cases within the sector, what tools could be utilized to extract them, several AI opportunities that can be leveraged and finally an implementation roadmap.",
     tags: ["AI Strategy", "Project Management"],
-    demo: "../manchester-microinternship-badge.png",
+    demo: "https://www.linkedin.com/in/chiragtolani97/",
     icon: Globe
   }
 ]
@@ -110,13 +110,7 @@ export default function Projects() {
                         </Link>
                       </motion.div>
                     )}
-                    {project.title === "Industry Project - AI Strategy" ? (
-                      <motion.div whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.95 }}>
-                        <div className="rounded-lg overflow-hidden border bg-white p-2 flex items-center justify-center">
-                          <Image src={project.demo} alt="Manchester Microinternship Badge" width={120} height={120} />
-                        </div>
-                      </motion.div>
-                    ) : (
+                    {project.demo && (
                       <motion.div whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.95 }}>
                         <Link href={project.demo} target="_blank" rel="noopener noreferrer">
                           <Button
