@@ -99,7 +99,14 @@ export default function Hero() {
                 variant="outline"
                 size="lg"
                 className="group"
-                onClick={() => window.open('/Chirag-Tolani-Resume-2025.pdf', '_blank')}
+                onClick={() => {
+                  const link = document.createElement('a');
+                  link.href = '/Chirag-Tolani-Resume-2025.pdf';
+                  link.download = 'Chirag-Tolani-Resume-2025.pdf';
+                  document.body.appendChild(link);
+                  link.click();
+                  document.body.removeChild(link);
+                }}
               >
                 Download Resume
                 <Download className="ml-2 h-4 w-4 group-hover:translate-y-1 transition-transform" />

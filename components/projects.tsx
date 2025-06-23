@@ -44,16 +44,15 @@ const projectsData = [
     description: "This project focuses on Relation Extraction, comparing two major approaches: a traditional machine learning model and a graph-based neural network. We implement XGBoost as our traditional model and Graph Convolutional Networks (GCN) as our graph-based approach, utilizing the re-DOCRED dataset. For both models, the input data is pre-processed and converted into BERT embeddings to capture rich contextual features.",
     tags: ["Python", "PyTorch", "Jupyter Notebook", "BERT"],
     github: "https://github.com/chiragtolani/DocRed-RE",
-    demo: "https://github.com/chiragtolani/DocRed-RE",
+    demo: "https://github.com/chiragtolani/DocRed-RE/blob/main/RE-paper-final.pdf",
     icon: BrainCircuit
   },
   {
-    title: "AI Content Creator using Zora API",
-    description: "A content creator platform that allows users to generate AI based images based on user defined prompts and the agent recommends potential changes as per latest trends. The AI agent then creates a NFT on ZoraCoin and the user can mint it on Zora Marketplace.",
-    tags: ["Python", "ZoraCoin", "Blockchain", "React"],
-    github: "https://github.com",
-    demo: "https://demo.com",
-    icon: Sparkles
+    title: "Industry Project - AI Strategy",
+    description: "Windō, a platform connecting Gen Z talent with purpose-driven employers, tasked us with addressing their manual data scraping challenges and scaling needs to support employers globally. Their mission is to empower young professionals with transparent CSR, sustainability, and DEI data, and our team developed an AI strategy report detailing their pain points, key AI trends and use cases within the sector, what tools could be utilized to extract them, several AI opportunities that can be leveraged and finally an implementation roadmap.",
+    tags: ["AI Strategy", "Project Management"],
+    demo: "/manchester-microinternship-badge.png",
+    icon: Globe
   }
 ]
 
@@ -118,30 +117,40 @@ export default function Projects() {
                     {project.icon && <project.icon size={64} />}
                   </div>
                   <div className="absolute inset-0 flex items-center justify-center gap-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                    <motion.div whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.95 }}>
-                      <Link href={project.github} target="_blank" rel="noopener noreferrer">
-                        <Button
-                          size="icon"
-                          variant="outline"
-                          className="rounded-full bg-background/20 backdrop-blur-sm border-white/20 hover:bg-background/30"
-                        >
-                          <Github className="h-5 w-5" />
-                          <span className="sr-only">GitHub</span>
-                        </Button>
-                      </Link>
-                    </motion.div>
-                    <motion.div whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.95 }}>
-                      <Link href={project.demo} target="_blank" rel="noopener noreferrer">
-                        <Button
-                          size="icon"
-                          variant="outline"
-                          className="rounded-full bg-background/20 backdrop-blur-sm border-white/20 hover:bg-background/30"
-                        >
-                          <ExternalLink className="h-5 w-5" />
-                          <span className="sr-only">Live Demo</span>
-                        </Button>
-                      </Link>
-                    </motion.div>
+                    {project.github && (
+                      <motion.div whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.95 }}>
+                        <Link href={project.github} target="_blank" rel="noopener noreferrer">
+                          <Button
+                            size="icon"
+                            variant="outline"
+                            className="rounded-full bg-background/20 backdrop-blur-sm border-white/20 hover:bg-background/30"
+                          >
+                            <Github className="h-5 w-5" />
+                            <span className="sr-only">GitHub</span>
+                          </Button>
+                        </Link>
+                      </motion.div>
+                    )}
+                    {project.title === "Industry Project - AI Strategy" ? (
+                      <motion.div whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.95 }}>
+                        <div className="rounded-lg overflow-hidden border bg-white p-2 flex items-center justify-center">
+                          <Image src={project.demo} alt="Manchester Microinternship Badge" width={120} height={120} />
+                        </div>
+                      </motion.div>
+                    ) : (
+                      <motion.div whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.95 }}>
+                        <Link href={project.demo} target="_blank" rel="noopener noreferrer">
+                          <Button
+                            size="icon"
+                            variant="outline"
+                            className="rounded-full bg-background/20 backdrop-blur-sm border-white/20 hover:bg-background/30"
+                          >
+                            <ExternalLink className="h-5 w-5" />
+                            <span className="sr-only">Live Demo</span>
+                          </Button>
+                        </Link>
+                      </motion.div>
+                    )}
                   </div>
                 </div>
 
