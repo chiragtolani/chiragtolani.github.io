@@ -100,12 +100,27 @@ export default function Hero() {
                 size="lg"
                 className="group"
                 onClick={() => {
-                  const link = document.createElement('a');
-                  link.href = '/Chirag-Tolani-Resume-2025.pdf';
-                  link.download = 'Chirag-Tolani-Resume-2025.pdf';
-                  document.body.appendChild(link);
-                  link.click();
-                  document.body.removeChild(link);
+                  // Create a more robust download function that works on all devices
+                  const downloadResume = () => {
+                    const link = document.createElement('a');
+                    link.href = '/Chirag-Tolani-Resume-2025.pdf';
+                    link.download = 'Chirag-Tolani-Resume-2025.pdf';
+                    link.target = '_blank'; // Open in new tab for mobile compatibility
+                    link.rel = 'noopener noreferrer';
+                    
+                    // For mobile devices, we'll open in a new tab instead of downloading
+                    if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+                      link.target = '_blank';
+                      link.click();
+                    } else {
+                      // For desktop, try the download approach
+                      document.body.appendChild(link);
+                      link.click();
+                      document.body.removeChild(link);
+                    }
+                  };
+                  
+                  downloadResume();
                 }}
               >
                 Download Resume
