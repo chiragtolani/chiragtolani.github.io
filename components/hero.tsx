@@ -5,12 +5,25 @@ import { motion } from "framer-motion"
 import { Button } from "@/components/ui/button"
 import Link from "next/link"
 import { ArrowDown, Download, ChevronDown, Globe } from "lucide-react"
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu"
 
 export default function Hero() {
   const [text, setText] = useState("")
   const [isTyping, setIsTyping] = useState(true)
-  const [showResumeDropdown, setShowResumeDropdown] = useState(false)
+  const [selectedResume, setSelectedResume] = useState("UK")
   const fullText = "Hi, I'm Chirag Tolani, an AI/ML Engineer"
+
+  const resumeOptions = [
+    { value: "UK", label: "UK Resume", filename: "Chirag-Tolani-Resume-UK-2025.pdf" },
+    { value: "UAE", label: "UAE Resume", filename: "Chirag-Tolani-Resume-UAE-2025.pdf" }
+  ]
+
+  const selectedResumeFile = resumeOptions.find(option => option.value === selectedResume)?.filename || "Chirag-Tolani-Resume-UK-2025.pdf"
 
   useEffect(() => {
     if (isTyping) {
@@ -95,37 +108,49 @@ export default function Hero() {
               </Link>
             </Button>
             <div className="relative">
-              <Button
-                variant="outline"
-                size="lg"
-                className="group"
-                onClick={() => {
-                  // Create a more robust download function that works on all devices
-                  const downloadResume = () => {
-                    const link = document.createElement('a');
-                    link.href = '/Chirag-Tolani-Resume-2025.pdf';
-                    link.download = 'Chirag-Tolani-Resume-2025.pdf';
-                    link.target = '_blank'; // Open in new tab for mobile compatibility
-                    link.rel = 'noopener noreferrer';
-                    
-                    // For mobile devices, we'll open in a new tab instead of downloading
-                    if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
-                      link.target = '_blank';
-                      link.click();
-                    } else {
-                      // For desktop, try the download approach
-                      document.body.appendChild(link);
-                      link.click();
-                      document.body.removeChild(link);
-                    }
-                  };
-                  
-                  downloadResume();
-                }}
-              >
-                Download Resume
-                <Download className="ml-2 h-4 w-4 group-hover:translate-y-1 transition-transform" />
-              </Button>
+              <DropdownMenu>
+                <DropdownMenuTrigger asChild>
+                  <Button variant="outline" size="lg" className="group">
+                    Download Resume
+                    <ChevronDown className="ml-2 h-4 w-4 group-hover:translate-y-1 transition-transform" />
+                  </Button>
+                </DropdownMenuTrigger>
+                <DropdownMenuContent align="end" className="w-48">
+                  {resumeOptions.map((option) => (
+                    <DropdownMenuItem
+                      key={option.value}
+                      onClick={() => {
+                        setSelectedResume(option.value);
+                        // Download the selected resume
+                        const downloadResume = () => {
+                          const link = document.createElement('a');
+                          link.href = `/${option.filename}`;
+                          link.download = option.filename;
+                          link.target = '_blank';
+                          link.rel = 'noopener noreferrer';
+                          
+                          // For mobile devices, we'll open in a new tab instead of downloading
+                          if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+                            link.target = '_blank';
+                            link.click();
+                          } else {
+                            // For desktop, try the download approach
+                            document.body.appendChild(link);
+                            link.click();
+                            document.body.removeChild(link);
+                          }
+                        };
+                        
+                        downloadResume();
+                      }}
+                      className="cursor-pointer"
+                    >
+                      <Globe className="mr-2 h-4 w-4" />
+                      {option.label}
+                    </DropdownMenuItem>
+                  ))}
+                </DropdownMenuContent>
+              </DropdownMenu>
             </div>
           </motion.div>
         </motion.div>

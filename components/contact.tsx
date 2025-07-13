@@ -165,7 +165,7 @@ export default function Contact() {
           >
             <h3 className="text-2xl font-bold mb-4">Get In Touch</h3>
             <p className="text-muted-foreground mb-8">
-              I'm currently available for graduate and full-time positions. If you're looking to hire, feel free to
+              I'm currently available for full-time positions. If you're looking to hire, feel free to
               reach out.
             </p>
 
