@@ -94,7 +94,7 @@ export default function About() {
             <div className="flex flex-wrap gap-4 mt-8">
               <div className="flex items-center gap-2">
                 <div className="w-2 h-2 rounded-full bg-teal-500"></div>
-                <span>Based in Manchester, United Kingdom</span>
+                <span>Based in Dubai, United Arab Emirates</span>
               </div>
               <div className="flex items-center gap-2">
                 <div className="w-2 h-2 rounded-full bg-teal-500"></div>
