@@ -61,34 +61,29 @@ export default function About() {
             <h3 className="text-2xl font-bold mb-4">Designing Scalable AI for a Smarter Future</h3>
 
             <p className="text-muted-foreground mb-6">
-              A results-driven consultant with 5+ years of experience in cloud strategy, software development, and
-              artificial intelligence. I specialize in designing scalable cloud architectures, optimizing costs, and
-              developing AI-driven solutions. Key achievements include:
+              Consultant with over 5 years of industry experience and a MSc in Advanced Computer Science (Artificial Intelligence) from The University of Manchester. Skilled in building scalable, intelligent systems by combining AI, cloud-native architecture, and software engineering. Few achievements include:
             </p>
 
             <ul className="list-disc pl-5 text-muted-foreground mb-6 space-y-2">
               <li>
-                Advised 15+ clients across banking, government, and enterprise sectors on cloud transformation and
-                optimization.
+                Leading the development of POC for Citizenly, a citizen journalism platform with AI-based moderation pipeline
               </li>
               <li>
-                Certified in major cloud platforms (AWS, GCP, OCI) and led as a Learning Coordinator for AWS
-                certification initiatives.
+                Built a GenAI-powered POC automating insurance claims processing in under 60 seconds
               </li>
               <li>
-                Designed and deployed secure, high-performance cloud infrastructures, enhancing scalability and
-                compliance.
+                Advised clients across banking, public sector, and enterprise on cloud and AI transformation
               </li>
               <li>
-                Good understanding of AI and ML models with expertise in Python, PyTorch, and deep learning frameworks.
+                Identified $1.3B+ in potential savings through a TCO and benchmarking study for a Saudi government cloud platform
               </li>
-              <li>Built web-based applications and enterprise solutions, integrating cloud-native capabilities.</li>
+              <li>
+                Designed and deployed secure, high-performance cloud solutions across AWS, GCP, and OCI; led AWS upskilling initiatives for Deloitte Consulting & Risk Advisory
+              </li>
             </ul>
 
             <p className="text-muted-foreground mb-6">
-              Currently pursuing an MSc in Advanced Computer Science (Artificial Intelligence) at The University of
-              Manchester, I am passionate about bridging AI, cloud, and software development to drive digital
-              innovation.
+              Seeking for roles within data science and machine learning in the UAE market.
             </p>
 
             <div className="flex flex-wrap gap-4 mt-8">

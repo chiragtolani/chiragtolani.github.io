@@ -7,34 +7,44 @@ import { cn } from "@/lib/utils"
 
 const experienceData = [
   {
-    title: "Senior Consultant - Cloud & Engineering",
+    title: "Innovation Lead",
+    company: "Digital Projects (Freelance)",
+    period: "Sept 2025 - Present",
+    description: [
+      "Driving the build of Citizenly, an AI-powered citizen journalism platform enabling diverse public voices to contribute and publish structured weekly editions",
+      "Building the PoC platform from scratch, including user workflows, article submission, and AI moderation powered by generative AI and plagiarism detection",
+      "Focusing on lean, scalable delivery using open-source and cloud-native tools to rapidly prototype and launch the platform",
+    ],
+  },
+  {
+    title: "Senior Consultant - Engineering, Data & AI",
     company: "Deloitte & Touche (M.E.)",
     period: "Jun 2023 - Sept 2024",
     description: [
-      "Advised 15+ financial and public sector clients on cloud strategy & architecture, service operations, and target operating models to accelerate and optimize cloud transformation",
-      "Projected pricing estimates and conducted TCO analysis for a major KSA government entity, identifying over 5 billion SAR in potential cost savings on cloud offerings",
-      "Developed proposals, eminence and thought leadership for 50+ clients and delivered trainings to the internal team on latest cloud trends",
+      "Advised 15+ clients across banking, public sector, and enterprise on cloud strategy, architecture, and governance, accelerating digital transformation",
+      "Delivered a GenAI solution using Google Cloud (Vertex AI, Document AI), cutting insurance claim processing from 3 hours to under 60 seconds and reducing manual workload by 90%",
+      "Led TCO and benchmarking analysis for a Saudi government cloud provider, identifying $1.3B+ in potential savings across onboarded ministries and public entities",
+      "Designed an agile cloud operating model for a top KSA bank, improving service delivery speed, operational efficiency, and readiness for full cloud adoption",
     ],
   },
   {
-    title: "Consultant - Cloud & Engineering",
+    title: "Consultant - Engineering, Data & AI",
     company: "Deloitte & Touche (M.E.)",
     period: "Aug 2021 - Jun 2023",
     description: [
-      "Prepared a cloud market analysis report for a leading KSA bank, covering trends, regulations, and insights from 200+ banks to guide the bank's cloud strategy and decision-making",
-      "Designed infrastructure architectures following best practices for banks and government organizations in the region, enhancing scalability, security, and compliance",
-      "Supporting in the quality assurance of the deliverables as well as managing and coordinating the project management activities involved in cloud projects",
+      "Conducted cloud landscape analysis of 200+ global banks to inform the regulatory strategy and competitive positioning of a leading Saudi bank",
+      "Developed infrastructure and service delivery playbooks for government clients, boosting operational standardisation and SLA adherence",
+      "Created eminence content, proposals, and thought leadership for 50+ clients, helping secure new business and strengthening the brand in the GCC cloud space",
+      "Managed QA and project coordination for multiple cloud engagements, ensuring on-time delivery and client satisfaction",
     ],
   },
   {
-    title: "Business Analyst - Cloud & Engineering",
+    title: "Business Analyst - Engineering, Data & AI",
     company: "Deloitte & Touche (M.E.)",
     period: "Aug 2019 - July 2021",
     description: [
-      "Prepared detailed infrastructure design documents and architectures for various banks and government entities in order to help them in the decision making of moving on-premises or cloud",
-      "Developed analysis reports for organizations to understand the current cloud landscape as well as providers available in the market",
-      "Developed strategy documents for cloud and data centers detailing the vision, objectives as well as analysis of their current landscape and their operating model in order to enable them to cloud",
-      "Supported in the practice development of the team to help grow their business (e.g. developed POVs and eminence for cloud policies and presence in the Middle East)",
+      "Drafted infrastructure blueprints and technical design documents for banks and ministries, enabling informed cloud migration decisions with clear risk mitigation",
+      "Supported practice growth by developing cloud policy guidance, POVs, and articles, enhancing visibility and credibility across the Middle East",
     ],
   },
 ]

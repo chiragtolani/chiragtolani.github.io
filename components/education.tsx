@@ -8,8 +8,8 @@ const educationData = [
   {
     degree: "Master of Science in Advanced Computer Science",
     institution: "The University of Manchester",
-    year: "Sept 2024 - Present",
-    description: "Specialized in Artificial Intelligence. Expecting Distinction",
+    year: "Sept 2024 - Sept 2025",
+    description: "Specialized in Artificial Intelligence. Graduated with Merit",
   },
   {
     degree: "Bachelor of Engineering (Hons.) in Computer Engineering",

@@ -7,6 +7,36 @@ import Link from "next/link"
 
 const certificationsData = [
   {
+    title: "McKinsey.org Forward Program",
+    issuer: "McKinsey & Company",
+    date: "Dec 2025",
+    credentialLink: "https://www.credly.com/badges/241dbb30-d6cb-4f35-a668-c981af9131a5/linked_in_profile",
+  },
+  {
+    title: "Dataiku Core Designer",
+    issuer: "Dataiku",
+    date: "Oct 2025",
+    credentialLink: "https://verify.skilljar.com/c/h23i2e8ejd8k",
+  },
+  {
+    title: "Dataiku ML Practitioner",
+    issuer: "Dataiku",
+    date: "Oct 2025",
+    credentialLink: "https://verify.skilljar.com/c/okzjsy3dkund",
+  },
+  {
+    title: "GitHub Foundations",
+    issuer: "GitHub",
+    date: "June 2025",
+    credentialLink: "https://www.credly.com/badges/69ac240b-8804-46fc-b10f-e655e121bf3f/public_url",
+  },
+  {
+    title: "AWS Educate Machine Learning Foundations",
+    issuer: "AWS",
+    date: "May 2025",
+    credentialLink: "https://www.credly.com/badges/b426f209-4b0e-45e6-97c4-cbba08ebc5fe/public_url",
+  },
+  {
     title: "Fundamentals of Deep Learning",
     issuer: "NVIDIA",
     date: "Apr 2025",
