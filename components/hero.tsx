@@ -12,7 +12,7 @@ export default function Hero() {
   const fullText = "Hi, I'm Chirag Tolani, an AI/ML Engineer"
 
   const downloadResume = () => {
-    const filename = "Chirag-Tolani-Resume-UAE-2025.pdf"
+    const filename = "Chirag-Tolani-Resume-2026.pdf"
     const link = document.createElement('a')
     link.href = `/${filename}`
     link.download = filename
